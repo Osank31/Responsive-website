@@ -1,0 +1,316 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Reset default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styles */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Background overlay */
+.container::before {
+    content: "";
+    background: url('../images/background2.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* Navigation styles */
+.container nav {
+    border: 2px solid black;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 25px 25px;
+    width: 98vw;
+}
+nav{
+    /* position: sticky;
+    top: 0; */
+    z-index: 999;
+    background-color: orange;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.container nav .logo span {
+    margin-left: 16px;
+}
+
+.container nav .logo img {
+    margin: 10px;
+    height: 12vh;
+    width: 4vw;
+    border-radius: 50%;
+}
+
+/* Navigation pages */
+.container nav .pages {
+    display: flex;
+}
+
+.container nav .pages ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    width: 78vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container nav .pages ul li {
+    font-size: 1.1rem;
+}
+
+.container nav .pages ul li a {
+    text-decoration: none;
+    color: maroon;
+}
+
+.container nav .pages ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: maroon;
+    display: block;
+    transition: 0.2s linear;
+}
+
+.container nav .pages ul li a:hover::after {
+    width: 100%;
+}
+
+.container nav .pages ul li:hover {
+    cursor: pointer;
+}
+
+/* Login section */
+.container nav .login {
+    width: 14vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container nav .login p {
+    margin: 0px;
+}
+
+.container nav .login p button {
+    padding: 4px;
+    font-size: 1rem;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.container nav .login p button:hover {
+    background-color: maroon;
+}
+
+
+.container .location p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container .location p span {
+    font-weight: bolder;
+    color: maroon;
+    text-decoration: underline;
+}
+
+.container .location .searchlocation {
+    border: 2px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container .location .searchlocation span{
+    position: absolute;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 1.2rem;    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    background-color: white;
+    border: 2px solid black;}
+.container .location .searchlocation input{
+    width: 30vw;
+    height: 12vh;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    /* background: white; */
+    border: none;
+    outline: none;
+}
+
+.container .location .searchlocation img {
+    height: 80vh;
+    width: 50vw;
+    z-index: -1;
+}
+
+/* Services section */
+.container .services {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.container .services p {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    margin: 126px 10px;
+    box-shadow: 10px 10px black;
+    width: 29vw;
+    height: -36vw;
+    box-sizing: border-box;
+}
+
+.container .services p img {
+    height: 24vh;
+    width: 22vw;
+}
+
+/* Menu section */
+.menu {
+    width: 100%;
+}
+
+.menu .menuitems {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 10px auto;
+    justify-content: space-evenly;
+}
+
+.menu .menuitems .food {
+    background: black;
+    margin: 0px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    position: relative;
+    border-radius: 25px;
+}
+
+.menu .menuitems .food img {
+    height: 50vh;
+    width: 30vw;
+    border-radius: 25px;
+    border: 10px solid white;
+    box-shadow: 10px 10px;
+}
+
+.menu .menuitems .food img:hover {
+    opacity: 0.4;
+}
+
+.menu .menuitems .food p {
+    position: absolute;
+    top: 25vh;
+    left: 12vw;
+    color: white;
+    opacity: 0;
+}
+
+.menu .menuitems .food:hover p {
+    opacity: 1;
+}
+
+/* Customer review section */
+.coustmer-review p {
+    text-align: center;
+}
+
+.coustmer-review .coustmers ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coustmer-review .coustmers ul li {
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    position: relative;
+    margin: 25px;
+    box-shadow: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.name {
+    position: relative;
+    top: 30px;
+}
+
+.fivestar {
+    height: 8vh;
+    width: 16vw;
+    margin: 0 0;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+}
+.coustmer-review > p{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: white;
+}
+.services p span{
+    font-size: 1.2rem;
+}
+.services p span{
+    font-size: 1.1rem;
+}
+.coustmer-review .coustmers ul li{
+    display: inline;
+}

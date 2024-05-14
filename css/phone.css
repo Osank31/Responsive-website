@@ -1,0 +1,16 @@
+.container nav .pages ul{
+    width: 52vw;
+}
+.container nav .pages ul li a{
+    font-size: 0.5rem;
+}
+.container nav .login p button {
+    font-size: 0.7rem;
+}
+.container .services p{
+    font-size: 0.8rem
+}
+.services p span{
+    font-size: 0.8rem;
+    
+}
